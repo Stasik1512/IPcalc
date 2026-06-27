@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="IPcalc/IPcalc.vcxproj" Id="a32c9512-3c94-4389-9eba-3a2c0fa0928e" />
+  <Project Path="Project1/Project1.vcxproj" Id="6097f91e-701a-421e-9229-108d2623314f" />
+</Solution>
