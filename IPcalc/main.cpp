@@ -27,12 +27,16 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		CHAR szIPprefix[32] = {};
 		switch (LOWORD(wParam))
 		{
+
+
 		case IDC_IPADDRESS:
 			SendMessage(hIPaddress, IPM_GETADDRESS, 0, (LPARAM)&dwIPaddress);
 			if (FIRST_IPADDRESS(dwIPaddress) < 128)SendMessage(hIPmask, IPM_SETADDRESS, 0, MAKEIPADDRESS(255,0,0,0));
 			else if (FIRST_IPADDRESS(dwIPaddress) < 192)SendMessage(hIPmask, IPM_SETADDRESS, 0, MAKEIPADDRESS(255, 255, 0, 0));
 			else if (FIRST_IPADDRESS(dwIPaddress) < 224)SendMessage(hIPmask, IPM_SETADDRESS, 0, MAKEIPADDRESS(255, 255, 255, 0));
 			break;
+
+
 		case IDC_IPMASK:
 			SendMessage(hIPmask, IPM_GETADDRESS, 0, (LPARAM)&dwIPmask);
 			for (dwIPprefix = 0; dwIPmask; dwIPprefix++, dwIPmask <<= 1);
@@ -40,6 +44,8 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			sprintf(szIPprefix, "%i", dwIPprefix);
 			SendMessage(hEditPrefix, WM_SETTEXT, 0, (LPARAM)szIPprefix);
 			break;
+
+
 
 			if (HIWORD(wParam) == EN_CHANGE)
 			{
