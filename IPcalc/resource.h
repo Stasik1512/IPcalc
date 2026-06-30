@@ -8,8 +8,8 @@
 #define IDC_IPADDRESS                   1003
 #define IDC_IPADDRESS2                  1004
 #define IDC_IPADDRESS_MASK              1004
+#define IDC_IPMASK                      1004
 #define IDC_EDIT_PREFIX                 1005
-#define IDC_SPIN                        1006
 #define IDC_SPIN_PREFIX                 1006
 
 // Next default values for new objects
